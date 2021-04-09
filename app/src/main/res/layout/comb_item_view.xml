@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="leg"
+            type="com.itheamc.parlaycalculator.models.Leg" />
+        <variable
+            name="position"
+            type="Integer" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:cardBackgroundColor="@color/color_dark"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/mainContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/sno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/bubblegum_sans"
+                    android:text="@{String.valueOf(position)}"
+                    android:textColor="@color/text_color"
+                    android:textSize="14sp"
+                    tools:text="#1" />
+
+                <TextView
+                    android:id="@+id/legTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bubblegum_sans"
+                    android:text="@{leg._name}"
+                    android:textColor="@color/text_color"
+                    android:textSize="12sp"
+                    tools:text="ANC" />
+
+                <TextView
+                    android:id="@+id/betsAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bubblegum_sans"
+                    android:text="@{String.format(`Bet Amount: $%s`, leg._bet_amount)}"
+                    android:textColor="@color/text_color"
+                    android:textSize="12sp"
+                    tools:text="Bet Amount: $200" />
+
+                <TextView
+                    android:id="@+id/americanOdds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bubblegum_sans"
+                    android:text="@{String.format(`MoneyLine: %s`, leg._american_odds)}"
+                    android:textColor="@color/text_color"
+                    android:textSize="12sp"
+                    tools:text="MoneyLine: -150" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
