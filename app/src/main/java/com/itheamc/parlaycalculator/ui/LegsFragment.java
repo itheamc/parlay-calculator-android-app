@@ -25,6 +25,7 @@ import com.itheamc.parlaycalculator.interfaces.LegsInterface;
 import com.itheamc.parlaycalculator.models.Combo;
 import com.itheamc.parlaycalculator.models.Leg;
 import com.itheamc.parlaycalculator.models.Selection;
+import com.itheamc.parlaycalculator.models.Ticket;
 import com.itheamc.parlaycalculator.utils.Combination;
 import com.itheamc.parlaycalculator.utils.Constraints;
 import com.itheamc.parlaycalculator.utils.callback.CombinationCallback;
@@ -166,7 +167,7 @@ public class LegsFragment extends Fragment implements LegsInterface, Combination
 
     // Function to convert List<List<Integer>> to  List<List<Legs>>
     private void convertList(List<List<Integer>> integerList) {
-        List<Combo> comboList = new ArrayList<>();
+        List<Ticket> ticketList = new ArrayList<>();
         int count = 0;
         for (List<Integer> integers: integerList) {
             List<Leg> tempLegs = new ArrayList<>();
@@ -178,13 +179,14 @@ public class LegsFragment extends Fragment implements LegsInterface, Combination
                 }
             }
             count++;
-            comboList.add(new Combo(
+            ticketList.add(new Ticket(
                     count,
+                    100,
                     tempLegs
             ));
         }
 
-        viewModel.setComboList(comboList);
+        viewModel.setTicketList(ticketList);
         navController.navigate(R.id.action_legsFragment_to_combinationFragment);
     }
 }

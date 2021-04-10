@@ -23,7 +23,7 @@
     <fragment
         android:id="@+id/combinationFragment"
         android:name="com.itheamc.parlaycalculator.ui.CombinationFragment"
-        android:label="Round Robin Combination"
+        android:label="@string/tickets"
         tools:layout="@layout/fragment_combination" />
     <fragment
         android:id="@+id/legsFragment"

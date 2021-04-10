@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 
 import com.itheamc.parlaycalculator.R;
 import com.itheamc.parlaycalculator.adapters.ComboAdapter;
+import com.itheamc.parlaycalculator.adapters.TicketsAdapter;
 import com.itheamc.parlaycalculator.databinding.FragmentCombinationBinding;
 import com.itheamc.parlaycalculator.databinding.FragmentHomeBinding;
 import com.itheamc.parlaycalculator.interfaces.LegsInterface;
@@ -24,7 +25,8 @@ import com.itheamc.parlaycalculator.viewmodel.LegsViewModel;
 public class CombinationFragment extends Fragment implements LegsInterface {
     private static final String TAG = "CombinationFragment";
     private FragmentCombinationBinding combinationBinding;
-    private ComboAdapter comboAdapter;
+//    private ComboAdapter comboAdapter;
+    private TicketsAdapter ticketsAdapter;
     private NavController navController;
     private LegsViewModel viewModel;
 
@@ -54,9 +56,9 @@ public class CombinationFragment extends Fragment implements LegsInterface {
         navController = Navigation.findNavController(view);
         viewModel = new ViewModelProvider(requireActivity()).get(LegsViewModel.class);
 
-        comboAdapter = new ComboAdapter(this);
-        combinationBinding.recyclerView.setAdapter(comboAdapter);
-        comboAdapter.submitList(viewModel.getComboList());
+        ticketsAdapter = new TicketsAdapter(this);
+        combinationBinding.recyclerView.setAdapter(ticketsAdapter);
+        ticketsAdapter.submitList(viewModel.getTicketList());
 
     }
 

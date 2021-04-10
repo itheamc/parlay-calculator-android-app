@@ -8,11 +8,13 @@ import java.util.Objects;
 
 public class Combo {
     private int comb_no;
+    private int bet_amount;
     private List<Leg> legList;
 
     // Constructor
-    public Combo(int comb_no, List<Leg> legList) {
+    public Combo(int comb_no, int bet_amount, List<Leg> legList) {
         this.comb_no = comb_no;
+        this.bet_amount = bet_amount;
         this.legList = legList;
     }
 

@@ -1,12 +1,15 @@
 package com.itheamc.parlaycalculator.adapters;
 
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupMenu;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.PopupMenu;
+//import androidx.appcompat.widget.PopupMenu;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -63,11 +66,13 @@ public class SelectionAdapter extends ListAdapter<Selection, SelectionAdapter.Se
             selectionViewBinding.optionMenu.setOnClickListener(this);
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.Q)
         @Override
         public void onClick(View v) {
             PopupMenu popupMenu = new PopupMenu(v.getContext(), v);
-            popupMenu.inflate(R.menu.selections_menu);
             popupMenu.setOnMenuItemClickListener(this);
+            popupMenu.inflate(R.menu.selections_menu);
+            popupMenu.setForceShowIcon(true);
             popupMenu.show();
         }
 

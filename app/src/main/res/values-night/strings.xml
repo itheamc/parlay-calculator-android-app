@@ -17,6 +17,7 @@
     <string name="option_menu_for_selections">Option menu for selections</string>
     <string name="create_combinations">Create Combinations</string>
     <string name="delete">Delete</string>
-    <string name="combination">Combination</string>
+    <string name="tickets">Parlay Tickets</string>
     <string name="option_menu_for_combo">Option menu for combo</string>
+    <string name="option_menu_for_ticket">Option menu for tickets</string>
 </resources>

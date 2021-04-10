@@ -10,9 +10,6 @@
        <KeyFrameSet>
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/mainContainer" />
-        <OnClick motion:targetId="@+id/mainContainer" />
-        <OnClick motion:targetId="@+id/mainContainer" />
-        <OnClick motion:targetId="@+id/mainContainer" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">

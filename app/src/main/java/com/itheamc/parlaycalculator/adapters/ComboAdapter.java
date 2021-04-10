@@ -38,7 +38,6 @@ public class ComboAdapter extends ListAdapter<Combo, ComboAdapter.ComboViewHolde
         Combo combo = getItem(position);
         List<Leg> legs = combo.getLegList();
         holder.viewBinding.setCombo(combo);
-        holder.viewBinding.setCombo(combo);
         holder.legsAdapter.submitList(combo.getLegList());
         holder.viewBinding.setOdds(Calculations.calcTrueOdds(legs));
         holder.viewBinding.setEarning(Calculations.calcCombinedEarning(legs));

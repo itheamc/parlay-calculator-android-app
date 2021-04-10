@@ -48,11 +48,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bubblegum_sans"
-                android:text="@{String.format(`Combo  #%d`, combo.comb_no)}"
+                android:text="@{String.format(`Ticket  #%d`, combo.comb_no)}"
                 android:textColor="#EFEFEF"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:text="Combo  #1" />
+                tools:text="Ticket  #1" />
 
             <Space
                 android:layout_width="0dp"
