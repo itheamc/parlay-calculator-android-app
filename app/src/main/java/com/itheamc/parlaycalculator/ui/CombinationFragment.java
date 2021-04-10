@@ -1,6 +1,9 @@
 package com.itheamc.parlaycalculator.ui;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -9,15 +12,8 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.itheamc.parlaycalculator.R;
-import com.itheamc.parlaycalculator.adapters.ComboAdapter;
 import com.itheamc.parlaycalculator.adapters.TicketsAdapter;
 import com.itheamc.parlaycalculator.databinding.FragmentCombinationBinding;
-import com.itheamc.parlaycalculator.databinding.FragmentHomeBinding;
 import com.itheamc.parlaycalculator.interfaces.LegsInterface;
 import com.itheamc.parlaycalculator.viewmodel.LegsViewModel;
 
@@ -25,7 +21,6 @@ import com.itheamc.parlaycalculator.viewmodel.LegsViewModel;
 public class CombinationFragment extends Fragment implements LegsInterface {
     private static final String TAG = "CombinationFragment";
     private FragmentCombinationBinding combinationBinding;
-//    private ComboAdapter comboAdapter;
     private TicketsAdapter ticketsAdapter;
     private NavController navController;
     private LegsViewModel viewModel;

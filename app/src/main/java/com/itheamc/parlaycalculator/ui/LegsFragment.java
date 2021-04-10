@@ -1,6 +1,11 @@
 package com.itheamc.parlaycalculator.ui;
 
 import android.os.Bundle;
+import android.os.Looper;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,18 +16,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
-import android.os.Looper;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.itheamc.parlaycalculator.R;
 import com.itheamc.parlaycalculator.adapters.SelectionAdapter;
-import com.itheamc.parlaycalculator.databinding.FragmentHomeBinding;
 import com.itheamc.parlaycalculator.databinding.FragmentLegsBinding;
 import com.itheamc.parlaycalculator.interfaces.LegsInterface;
-import com.itheamc.parlaycalculator.models.Combo;
 import com.itheamc.parlaycalculator.models.Leg;
 import com.itheamc.parlaycalculator.models.Selection;
 import com.itheamc.parlaycalculator.models.Ticket;

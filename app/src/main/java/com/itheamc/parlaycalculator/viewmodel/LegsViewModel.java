@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.itheamc.parlaycalculator.models.Combo;
 import com.itheamc.parlaycalculator.models.Leg;
 import com.itheamc.parlaycalculator.models.Selection;
 import com.itheamc.parlaycalculator.models.Ticket;
@@ -19,7 +18,6 @@ public class LegsViewModel extends AndroidViewModel {
     private final LiveData<List<Leg>> legsList;
     private final LegsRepository legsRepository;
     private List<Selection> selectionList;
-    private List<Combo> comboList;
     private List<Ticket> ticketList;
 
     // Constructor
@@ -70,18 +68,6 @@ public class LegsViewModel extends AndroidViewModel {
         selectionList.add(selection);
     }
 
-    // Function to combo list
-
-    public List<Combo> getComboList() {
-        return comboList;
-    }
-
-    public void setComboList(List<Combo> comboList) {
-        if (this.comboList == null) {
-            this.comboList = new ArrayList<>();
-        }
-        this.comboList = comboList;
-    }
 
     // Function to Tickets list
 
